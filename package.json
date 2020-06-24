@@ -4,14 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run lazyFun:serve-ssr",
     "serve:ssr": "node dist/lazyFun/server/main.js",
     "build:ssr": "ng build --prod && ng run lazyFun:server:production",
-    "prerender": "ng run lazyFun:prerender"
+    "prerender": "ng run lazyFun:prerender",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
